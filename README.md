@@ -1,6 +1,5 @@
 # Nya — a tiny terminal kitten
 
-[![GitHub](https://img.shields.io/badge/GitHub-aditya4f%2FNya--theKitten-181717?logo=github)](https://github.com/aditya4f/Nya-theKitten)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -41,8 +40,6 @@ Or run without installing:
 # or
 PYTHONPATH=src python3 -m kitten
 ```
-
-**→ [Open on GitHub](https://github.com/aditya4f/Nya-theKitten)**
 
 ---
 
