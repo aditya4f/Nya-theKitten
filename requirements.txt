@@ -1,0 +1,5 @@
+# No third-party packages. Python 3.8+ from the system is enough.
+# Termux: pkg install python git
+# Debian/Ubuntu: sudo apt install python3
+# macOS: python3 is included with Xcode CLT / Homebrew
+# Windows: python.org installer, or `winget install Python.Python.3.12`
