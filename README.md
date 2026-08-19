@@ -1,8 +1,14 @@
 # Nya — a tiny terminal kitten
 
+[![GitHub](https://img.shields.io/badge/GitHub-aditya4f%2FNya--theKitten-181717?logo=github)](https://github.com/aditya4f/Nya-theKitten)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A living ASCII companion that sits in your terminal, blinks, stretches,
-falls asleep, and reacts to what you type. Zero third-party packages.
+falls asleep, and reacts to what you type. **Zero third-party packages.**
 Python 3.8+ only.
+
+**Repository:** https://github.com/aditya4f/Nya-theKitten
 
 ```
         ______________
@@ -16,7 +22,9 @@ Python 3.8+ only.
           (_|   |_)
 ```
 
-## Install
+---
+
+## Quick start
 
 ```bash
 git clone https://github.com/aditya4f/Nya-theKitten.git
@@ -26,13 +34,75 @@ chmod +x install.sh kitten
 kitten
 ```
 
-Or skip the installer and run from the folder:
+Or run without installing:
 
 ```bash
 ./kitten
 # or
 PYTHONPATH=src python3 -m kitten
 ```
+
+**→ [Open on GitHub](https://github.com/aditya4f/Nya-theKitten)**
+
+---
+
+## Install by OS
+
+### Linux
+
+```bash
+# Python 3 is usually already installed (Debian/Ubuntu/Fedora/Arch).
+git clone https://github.com/aditya4f/Nya-theKitten.git
+cd Nya-theKitten
+chmod +x install.sh kitten
+./install.sh
+kitten
+```
+
+If `python3` is missing:
+
+```bash
+# Debian / Ubuntu
+sudo apt update && sudo apt install -y python3 git
+
+# Fedora
+sudo dnf install -y python3 git
+
+# Arch
+sudo pacman -S python git
+```
+
+### macOS
+
+```bash
+# Xcode CLT or Homebrew Python is fine.
+git clone https://github.com/aditya4f/Nya-theKitten.git
+cd Nya-theKitten
+chmod +x install.sh kitten
+./install.sh
+kitten
+```
+
+Optional with Homebrew:
+
+```bash
+brew install python git
+```
+
+### Windows (Windows Terminal, PowerShell, CMD)
+
+1. Install **Python 3** from https://www.python.org/downloads/  
+   (check **“Add python.exe to PATH”** during setup).
+2. Open **PowerShell** or **Windows Terminal**:
+
+```powershell
+git clone https://github.com/aditya4f/Nya-theKitten.git
+cd Nya-theKitten
+python .\kitten
+```
+
+Windows 10+ enables ANSI via Virtual Terminal processing at startup.
+**Windows Terminal** is recommended; stock CMD works for the basics.
 
 ### Termux (Android)
 
@@ -41,44 +111,25 @@ pkg update
 pkg install python git
 git clone https://github.com/aditya4f/Nya-theKitten.git
 cd Nya-theKitten
+chmod +x install.sh kitten
 ./install.sh
 kitten
 ```
 
-If `kitten` is not found:
+If `kitten` is not found after install:
 
 ```bash
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
-```
-
-### Linux
-
-```bash
-# Debian / Ubuntu / Fedora already have python3.
-./install.sh
 kitten
 ```
 
-### macOS
+### SSH / remote servers
 
-```bash
-# Xcode CLT or Homebrew python is fine.
-./install.sh
-kitten
-```
+Same as Linux. Clone on the remote host, run `./kitten`. Works over SSH
+when the remote `TERM` is not `dumb`.
 
-### Windows (Windows Terminal, PowerShell, CMD)
-
-1. Install Python 3 from https://www.python.org/downloads/ (tick “Add to PATH”).
-2. In PowerShell, from this folder:
-
-```powershell
-python .\kitten
-```
-
-Windows 10+ consoles get ANSI via Virtual Terminal processing (enabled at
-startup). Windows Terminal is the nicest host; stock CMD works for the basics.
+---
 
 ## Commands
 
@@ -109,6 +160,8 @@ kitten --plain       disable ANSI (reprint fallback)
 kitten --reset       forget the saved kitten
 ```
 
+---
+
 ## How it feels alive
 
 The kitten is a small state machine, not a GIF.
@@ -124,7 +177,9 @@ The kitten is a small state machine, not a GIF.
 State file:
 
 - Linux / macOS / Termux: `~/.config/terminal-kitten/state.json`
-- Windows: `%APPDATA%\terminal-kitten\state.json`
+- Windows: `%APPDATA%\\terminal-kitten\\state.json`
+
+---
 
 ## Terminal notes
 
@@ -137,6 +192,8 @@ Nya probes the session instead of assuming capabilities.
 - Unsupported hosts fall back to reprinting a compact block
 - SIGINT / SIGTERM restore the cursor, mouse, and original screen
 
+---
+
 ## Tests
 
 ```bash
@@ -144,6 +201,8 @@ python3 -m unittest discover -s tests -v
 ```
 
 No network, no TTY, no extra packages.
+
+---
 
 ## Project layout
 
@@ -157,6 +216,12 @@ Nya-theKitten/
 └── README.md
 ```
 
+---
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+---
+
+<sub>Created with [Grok](https://grok.com) (xAI) from a single prompt.</sub>
